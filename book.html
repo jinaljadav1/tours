@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book now</title>
+</head>
+<style>
+    /* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Section Styling */
+.section-book {
+  background-color: #f4f4f4;
+  padding: 60px 20px;
+}
+
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.book__form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Form Heading */
+.heading-secondary {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Form Group */
+.form__group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #888;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+.form__input {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  background-color: #f9f9f9;
+}
+
+.form__input:focus {
+  border-color: #4caf50;
+}
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+  top: -10px;
+  font-size: 14px;
+  color: #4caf50;
+}
+
+/* Radio Buttons */
+.form__radio-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form__radio-input {
+  margin-right: 10px;
+}
+
+.form__radio-label {
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+}
+
+.form__radio-button {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin-right: 8px;
+}
+
+.form__radio-input:checked + .form__radio-label .form__radio-button {
+  background-color: #4caf50;
+}
+
+/* Button Styling */
+.btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.btn--green {
+  background-color: #4caf50;
+}
+
+.u-margin-bottom-mid {
+  margin-bottom: 30px;
+}
+
+</style>
+<body>
+    <section class="section-book">
+        <div class="row">
+          <div class="book">
+            <div class="book__form">
+              <form action="index.html" class="form">
+                <div class="u-margin-bottom-mid">
+                  <h2 class="heading-secondary">Plan Your Escape Now</h2>
+                </div>
+      
+                <!-- Full Name Input -->
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Full Name"
+                    id="name"
+                    required
+                  />
+                  <label for="name" class="form__label">Full Name</label>
+                </div>
+      
+                <!-- Email Input -->
+                <div class="form__group">
+                  <input
+                    type="email"
+                    class="form__input"
+                    placeholder="Email Address"
+                    id="email"
+                    required
+                  />
+                  <label for="email" class="form__label">Email Address</label>
+                </div>
+      
+                <!-- Radio Group for Tour Size -->
+                <div class="form__group u-margin-bottom-mid">
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="small"
+                      name="size"
+                      required
+                    />
+                    <label for="small" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Small Tour Group
+                    </label>
+                  </div>
+      
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="large"
+                      name="size"
+                      required
+                    />
+                    <label for="large" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Large Tour Group
+                    </label>
+                  </div>
+                </div>
+      
+                <!-- Submit Button -->
+                <div class="form__group">
+                  <button type="submit" class="btn btn--green">What's Next &rarr;</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>

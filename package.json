@@ -1,0 +1,11 @@
+{
+  "name": "tours",
+  "version": "1.0.0",
+  "description": "It's a project from \"Udemy - Advanced CSS And Sass Take Your CSS To The Next Level!\" course. ",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass"
+  }
+}
